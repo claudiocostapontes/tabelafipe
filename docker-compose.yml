@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # Banco de Dados PostgreSQL
+  postgres-db:
+    image: postgres:14-alpine
+    container_name: fipe-postgres
+    environment:
+      POSTGRES_USER: fipeuser
+      POSTGRES_PASSWORD: fipepassword
+      POSTGRES_DB: fipedb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - fipe-network
+
+  # Fila de Mensagens RabbitMQ
+  rabbitmq:
+    image: rabbitmq:3.9-management-alpine
+    container_name: fipe-rabbitmq
+    ports:
+      - "5672:5672"  # Porta para as aplicações
+      - "15672:15672" # Interface de gerenciamento web
+    networks:
+      - fipe-network
+
+  # Cache em Memória Redis
+  redis-cache:
+    image: redis:7-alpine
+    container_name: fipe-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - fipe-network
+
+  # API-1: Gateway e Orquestrador
+  api-1-gateway:
+    build:
+      context: ./api-1 # Caminho para o Dockerfile da API-1
+      dockerfile: Dockerfile
+    container_name: api-1-gateway
+    depends_on:
+      - postgres-db
+      - rabbitmq
+      - redis-cache
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/fipedb
+      - SPRING_DATASOURCE_USERNAME=fipeuser
+      - SPRING_DATASOURCE_PASSWORD=fipepassword
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_REDIS_HOST=redis-cache
+      # Outras variáveis de ambiente (JWT secret, etc)
+    ports:
+      - "8080:8080"
+    networks:
+      - fipe-network
+
+  # API-2: Processador Assíncrono
+  api-2-worker:
+    build:
+      context: ./api-2 # Caminho para o Dockerfile da API-2
+      dockerfile: Dockerfile
+    container_name: api-2-worker
+    depends_on:
+      - postgres-db
+      - rabbitmq
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/fipedb
+      - SPRING_DATASOURCE_USERNAME=fipeuser
+      - SPRING_DATASOURCE_PASSWORD=fipepassword
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    networks:
+      - fipe-network
+
+volumes:
+  postgres_data:
+
+networks:
+  fipe-network:
+    driver: bridge
