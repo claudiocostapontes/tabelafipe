@@ -1,3 +1,13 @@
+package com.empresa.fipe.worker;
+
+import com.suaempresa.api.repository.Vehicle;
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class VehicleProcessingService {
@@ -5,22 +15,23 @@ public class VehicleProcessingService {
     private final FipeClient fipeClient;
     private final VehicleRepository vehicleRepository;
 
-    @Transactional // Garante que a operação seja atômica
-    public void processAndSaveVehiclesForBrand(String brandName) {
-        // Busca os modelos na FIPE para a marca específica
-        List<FipeModelDTO> models = fipeClient.getModelsByBrand(brandName);
+    @Transactional
+    public <FipeModelDTO, Vehicle> void processAndSaveVehiclesForBrand(String brandName, String valueOf) {
 
-        // Converte DTOs para Entidades
-        List<Vehicle> vehicles = models.stream()
-            .map(dto -> {
-                Vehicle vehicle = new Vehicle();
-                vehicle.setBrand(brandName);
-                vehicle.setModel(dto.getNome());
-                vehicle.setFipeCode(dto.getCodigo());
-                return vehicle;
-            }).collect(Collectors.toList());
+        List<FipeModelDTO> models = (List<FipeModelDTO>) fipeClient.getModelsByBrand(brandName);
 
-        // Salva todos os veículos em lote para melhor performance
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        for (FipeModelDTO model : models) {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setBrand(brandName);
+            vehicle.setModel(valueOf);
+            vehicle.setFipeCode(model.getClass());
+            Vehicle apply = vehicle;
+            vehicles.add(apply);
+        }
+
+
         vehicleRepository.saveAll(vehicles);
     }
 }

@@ -5,53 +5,82 @@ services:
   postgres-db:
     image: postgres:14-alpine
     container_name: fipe-postgres
+    restart: unless-stopped # ADICIONADO: Reinicia o contêiner se ele falhar
     environment:
-      POSTGRES_USER: fipeuser
-      POSTGRES_PASSWORD: fipepassword
-      POSTGRES_DB: fipedb
+      # ALTERADO: Usando variáveis do arquivo .env
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - fipe-network
+    # ADICIONADO: Healthcheck para garantir que o banco esteja pronto
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   # Fila de Mensagens RabbitMQ
   rabbitmq:
     image: rabbitmq:3.9-management-alpine
     container_name: fipe-rabbitmq
+    restart: unless-stopped # ADICIONADO
     ports:
-      - "5672:5672"  # Porta para as aplicações
-      - "15672:15672" # Interface de gerenciamento web
+      - "5672:5672"
+      - "15672:15672"
     networks:
       - fipe-network
+    # ADICIONADO: Healthcheck para garantir que a fila esteja pronta
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_running", "-q"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
 
   # Cache em Memória Redis
   redis-cache:
     image: redis:7-alpine
     container_name: fipe-redis
+    restart: unless-stopped # ADICIONADO
     ports:
       - "6379:6379"
     networks:
       - fipe-network
+    # ADICIONADO: Healthcheck para o Redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
 
   # API-1: Gateway e Orquestrador
   api-1-gateway:
     build:
-      context: ./api-1 # Caminho para o Dockerfile da API-1
+      context: ./api-1
       dockerfile: Dockerfile
     container_name: api-1-gateway
+    restart: unless-stopped # ADICIONADO
+    # ALTERADO: Agora espera os healthchecks passarem
     depends_on:
-      - postgres-db
-      - rabbitmq
-      - redis-cache
+      postgres-db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/fipedb
-      - SPRING_DATASOURCE_USERNAME=fipeuser
-      - SPRING_DATASOURCE_PASSWORD=fipepassword
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/${POSTGRES_DB}
+      - SPRING_DATASOURCE_USERNAME=${POSTGRES_USER}
+      - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
       - SPRING_RABBITMQ_HOST=rabbitmq
       - SPRING_REDIS_HOST=redis-cache
-      # Outras variáveis de ambiente (JWT secret, etc)
     ports:
       - "8080:8080"
     networks:
@@ -60,16 +89,20 @@ services:
   # API-2: Processador Assíncrono
   api-2-worker:
     build:
-      context: ./api-2 # Caminho para o Dockerfile da API-2
+      context: ./api-2
       dockerfile: Dockerfile
     container_name: api-2-worker
+    restart: unless-stopped # ADICIONADO
+    # ALTERADO: Agora espera os healthchecks passarem
     depends_on:
-      - postgres-db
-      - rabbitmq
+      postgres-db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/fipedb
-      - SPRING_DATASOURCE_USERNAME=fipeuser
-      - SPRING_DATASOURCE_PASSWORD=fipepassword
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/${POSTGRES_DB}
+      - SPRING_DATASOURCE_USERNAME=${POSTGRES_USER}
+      - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
       - SPRING_RABBITMQ_HOST=rabbitmq
     networks:
       - fipe-network

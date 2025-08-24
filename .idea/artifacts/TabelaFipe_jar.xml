@@ -2,8 +2,9 @@
   <artifact type="jar" name="TabelaFipe:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TabelaFipe_jar</output-path>
     <root id="archive" name="TabelaFipe.jar">
-      <element id="module-output" name="api-1" />
-      <element id="module-output" name="api-2" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>
