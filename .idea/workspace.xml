@@ -5,54 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ae7f28a-99db-4069-962c-ff50fdd7bf5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TabelaFipe.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/DTO/VehicleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/controller/UpdateVehicleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/controller/VehicleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/gateway/DataLoadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/gateway/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/repository/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/repository/VehicleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/service/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/service/VehicleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/service/VehicleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/test/java/com/suaempresa/api/gateway/BrandProducerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/FipeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/VehicleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/VehicleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/FipeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-2/src/main/java/com/suaempresa/api/gateway/SpringBootApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/TabelaFipe_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/TabelaFipe_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gateway.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/api-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/api-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/BrandProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/BuscarMarcasArmazenadas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/BuscarVeículosMarca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/DataLoadController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/DataLoadService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/SalvarAlterarDadosVeiculo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/empresa/fipe/gateway/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/ApiWorkerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/BrandConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/BrandConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/test/java/com/empresa/fipe/worker/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleProcessingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-1/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-2/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-2/target/classes/com/empresa/fipe/worker/BrandConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-2/target/classes/com/empresa/fipe/worker/FipeClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-2/target/classes/com/empresa/fipe/worker/VehicleProcessingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-2/target/classes/com/empresa/fipe/worker/VehicleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-2/target/classes/com/suaempresa/api/gateway/SpringBootApplication.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,48 +63,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yml.api-1-gateway: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.api-2-worker: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.postgres-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.rabbitmq: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.redis-cache: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fipe-gateway-api [verify].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/TabelaFipe&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.22873563&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Debug",
+    "Docker.docker-compose.yml.api-1-gateway: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.api-2-worker: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.postgres-db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.rabbitmq: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.redis-cache: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Maven.fipe-gateway-api [clean].executor": "Run",
+    "Maven.fipe-gateway-api [compile].executor": "Run",
+    "Maven.fipe-gateway-api [deploy].executor": "Run",
+    "Maven.fipe-gateway-api [install].executor": "Run",
+    "Maven.fipe-gateway-api [package].executor": "Run",
+    "Maven.fipe-gateway-api [site].executor": "Run",
+    "Maven.fipe-gateway-api [test].executor": "Run",
+    "Maven.fipe-gateway-api [validate].executor": "Run",
+    "Maven.fipe-gateway-api [verify].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/TabelaFipe",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.22873563",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.suaempresa.api.gateway" />
@@ -160,7 +121,20 @@
       <recent name="com.empresa.fipe.gateway" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.api-1-gateway: Compose Deployment">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suaempresa.api.gateway.ApiGatewayApplication" />
+      <module name="fipe-gateway-api (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suaempresa.api.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -186,19 +160,6 @@
           <option name="services">
             <list>
               <option value="api-2-worker" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.postgres-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="postgres-db" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -234,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Docker.docker-compose.yml.api-1-gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.api-2-worker: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.redis-cache: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.postgres-db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
