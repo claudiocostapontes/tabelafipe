@@ -4,8 +4,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public record DataLoadService<FipeBrandDTO, BrandProducer>(FipeClient fipeClient, BrandProducer brandProducer) {
+public record DataLoadService<FipeBrandDTO, BrandProducer>(
+        com.suaempresa.api.gateway.FipeClient fipeClient, BrandProducer brandProducer) {
 
     public void startInitialLoad() {
 

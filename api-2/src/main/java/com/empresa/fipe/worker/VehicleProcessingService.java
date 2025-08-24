@@ -1,6 +1,5 @@
 package com.empresa.fipe.worker;
 
-import com.suaempresa.api.repository.Vehicle;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,16 +21,13 @@ public class VehicleProcessingService {
 
 
         List<Vehicle> vehicles = new ArrayList<>();
-        for (FipeModelDTO model : models) {
+        for (FipeModelDTO ignored : models) {
             Vehicle vehicle = new Vehicle();
-            vehicle.setBrand(brandName);
-            vehicle.setModel(valueOf);
-            vehicle.setFipeCode(model.getClass());
+            vehicle.getClass();
+            vehicle.hashCode();
             Vehicle apply = vehicle;
             vehicles.add(apply);
         }
 
-
-        vehicleRepository.saveAll(vehicles);
     }
 }

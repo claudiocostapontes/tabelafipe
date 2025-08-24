@@ -1,6 +1,8 @@
 package com.suaempresa.api.controller;
 
-import com.suaempresa.api.service.VehicleService;
+import com.suaempresa.api.com.controller.UpdateVehicleDTO;
+import com.suaempresa.api.com.controller.VehicleDTO;
+import com.suaempresa.api.com.service.VehicleService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +20,11 @@ public class VehicleController {
 
     @PutMapping("/vehicles/{fipeCode}")
     @Operation(summary = "Atualiza o modelo e observações de um veículo")
-    public ResponseEntity<com.suaempresa.api.controller.VehicleDTO> updateVehicle(
+    public ResponseEntity<VehicleDTO> updateVehicle(
             @PathVariable String fipeCode,
-            @RequestBody @Valid com.suaempresa.api.controller.UpdateVehicleDTO dto) throws Throwable {
+            @RequestBody @Valid UpdateVehicleDTO dto) throws Throwable {
 
-        com.suaempresa.api.controller.VehicleDTO updatedVehicle = (com.suaempresa.api.controller.VehicleDTO) vehicleService.updateVehicle(fipeCode, dto);
+        VehicleDTO updatedVehicle = (VehicleDTO) vehicleService.updateVehicle(fipeCode, dto);
         return ResponseEntity.ok(updatedVehicle);
     }
 }

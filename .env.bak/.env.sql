@@ -1,3 +1,0 @@
-POSTGRES_USER=fipeuser
-POSTGRES_PASSWORD=fipesupersecretpassword
-POSTGRES_DB=fipedb

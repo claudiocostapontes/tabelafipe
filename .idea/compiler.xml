@@ -16,7 +16,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fipe-gateway-api" options="-parameters" />
-      <module name="fipe-gateway-api (1)" options="-parameters" />
+      <module name="fipe-gateway-api (1)" options="-parameters --add-exports java.net.http/jdk.internal.net.http.common=ALL-UNNAMED" />
       <module name="fipe-gateway-api (2)" options="-parameters" />
     </option>
   </component>

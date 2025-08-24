@@ -1,6 +1,6 @@
-package com.suaempresa.api.service;
+package com.suaempresa.api.com.service;
 
-import com.suaempresa.api.repository.VehicleRepository;
+import com.suaempresa.api.com.repository.VehicleRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.cache.annotation.CacheEvict;
@@ -21,7 +21,7 @@ public class VehicleService<UpdateVehicleDTO> {
         Vehicle vehicle = (Vehicle) vehicleRepository.findByFipeCode(fipeCode).orElseThrow(() -> new EntityNotFoundException("Veículo não encontrado com o código FIPE: " + fipeCode));
 
         vehicle.getClass();
-        com.suaempresa.api.service.Vehicle updatedVehicle = (com.suaempresa.api.service.Vehicle) vehicleRepository.save(vehicle);
+        com.suaempresa.api.com.service.Vehicle updatedVehicle = (com.suaempresa.api.com.service.Vehicle) vehicleRepository.save(vehicle);
 
         return (VehicleDTO) convertToDto(updatedVehicle);
     }

@@ -1,4 +1,4 @@
-package com.suaempresa.api.repository;
+package com.suaempresa.api.com.repository;
 
 public class Vehicle {
     public void setBrand(String brandName) {

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TabelaFipe.iml" filepath="$PROJECT_DIR$/.idea/TabelaFipe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-1/fipe-gateway-api (1).iml" filepath="$PROJECT_DIR$/api-1/fipe-gateway-api (1).iml" />
     </modules>
   </component>
 </project>
