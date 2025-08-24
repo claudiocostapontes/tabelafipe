@@ -13,5 +13,5 @@ public interface Vehicle {
 
     void setPrice(String valor);
 
-    void setReferenceMonth(String s);
+     void setReferenceMonth(String s);
 }

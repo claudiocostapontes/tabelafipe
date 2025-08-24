@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ae7f28a-99db-4069-962c-ff50fdd7bf5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-1/fipe-gateway-api (1).iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/BrandDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/VehicleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/WebClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/tring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/main/java/com/tabelafipe/api/service/FipeDataPopulationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-1/src/test/java/com/tabelafipe/api/service/FipeDataPopulationServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-2/src/main/java/com/suaempresa/api/gateway/FipeBrandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.bak/.env.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TabelaFipe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TabelaFipe.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/DTO/VehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/VehicleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/controller/UpdateVehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/controller/UpdateVehicleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/controller/VehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/controller/VehicleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/gateway/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/repository/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/repository/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/repository/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/repository/VehicleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/service/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/service/VehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/VehicleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/VehicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/DataLoadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/DataLoadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/src/main/java/com/suaempresa/api/gateway/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/target/generated-sources/annotations/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleProcessingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-1/src/main/java/com/suaempresa/api/com/service/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +42,7 @@
     <setting file="file://$PROJECT_DIR$/api-2/src/main/java/com/empresa/fipe/worker/VehicleProcessingService.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
